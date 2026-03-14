@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fake News Detector</h1>
+      <p>Detection using ML (TF-IDF + PassiveAggressiveClassifier, ~92% acc)</p>
+      <textarea
+        id="newsText"
+        placeholder="Paste news title + text... (e.g., from sample)"
+      ></textarea>
+      <button onclick="predictNews()">Detect Fake News</button>
+      <div id="result"></div>
+      <div id="sample">
+        <h2>Check News URL</h2>
+
+<input type="text" id="urlInput" 
+placeholder="Paste news article URL"  style="width: 100%; padding: 10px; font-size: 16px;" />
+<br>
+<br>
+
+<button onclick="checkURL()">Check URL</button>
+        <h3>Sample Fake News:</h3>
+        <p>
+          The nation leader Sends Out Embarrassing New Year’s Eve Message; This is
+          Disturbing...
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
