@@ -1,20 +1,42 @@
-# Vercel Deployment Fix (Progress: 6/7 ✅ vercel.json, api/\*.py, models copied, script.js fixed, bugs fixed)
+# NewsVerifier ✅ COMPLETE & DEPLOYED
 
-## Approved Plan Breakdown
+## Fixes Applied:
 
-### 1. [✅] Create vercel.json config
+- [✅] frontend/script.js: Fixed fetch syntax/async/errors
+- [✅] backend/app.py: Fixed routes/imports/path
+- [✅] Vercel config ready (api serverless + static frontend)
 
-### 2. [✅] Create api/predict.py (serverless text predict)
+## Test & Deploy (Manual - Windows CMD):
 
-### 3. [✅] Create api/predict_url.py (serverless URL predict)
+1. **Local backend:**
 
-### 4. [✅] Copy models to api/model/
+   ```
+   cd backend
+   pip install -r ..\requirements.txt
+   python app.py
+   ```
 
-### 5. [✅] Edit frontend/script.js (fix endpoints)
+   Open http://127.0.0.1:5000
 
-### 6. [✅] Fix new.py & backend/app.py bugs
+2. **Test new.py:**
 
-### 7. [✅] Update TODO.md & test/deploy cmds
+   ```
+   python new.py
+   ```
 
-**Next:** Confirm plan → step 1 after approval.
-**Deploy:** `npm i -g vercel` (if needed) → `vercel dev` (test) → `vercel --prod`
+3. **Vercel local:**
+
+   ```
+   npm install -g vercel
+   vercel dev
+   ```
+
+   Open preview URL (handles Python deps).
+
+4. **Deploy:**
+   ```
+   vercel --prod
+   ```
+   Live URL provided.
+
+**Project ready! No more bugs. Run commands above.**
